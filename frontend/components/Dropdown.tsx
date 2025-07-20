@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 
-const Dropdown = ({ title, items }) => {
+const Dropdown = ({ title, items }: any) => {
    const [openModal, setOpenModal] = useState(false);
    const router = useRouter();
    const t = useTranslations("navbar");
@@ -14,7 +14,7 @@ const Dropdown = ({ title, items }) => {
       })
    }, []);
 
-   const navigate = (path) => {
+   const navigate = (path: string) => {
       router.push(path);
    }
 
