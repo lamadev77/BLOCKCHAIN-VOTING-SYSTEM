@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import { responsive } from '../../constants';
+import { responsive } from '.../constants/locale';
 
 const ConstitutionalProvision = () => {
   const t = useTranslations("constitutional_provision");
