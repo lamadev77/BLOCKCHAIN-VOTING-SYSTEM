@@ -1,9 +1,9 @@
-const firebaseStorageService = require("./firebaseStorageService");
 const _uploader = require("./multer");
-const pusherInstance = require("./pusherConfig");
+const _pusherInstance = require("./pusherConfig");
+
+console.log("config..")
 
 module.exports = {
-  firebaseStorageService,
   uploader: _uploader,
-  pusherInstance
+  pusherInstance: _pusherInstance
 }

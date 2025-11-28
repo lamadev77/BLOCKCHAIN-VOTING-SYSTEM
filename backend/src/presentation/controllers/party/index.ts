@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 
 const { UPLOAD_FOLDER_PATH } = require("../../../constants/index");
-const { uploadFileToFirebaseStorage } = require("../../../domain/services/index");
 
 const { candidateModal, partyModel } = require("../../../infrastructure/models/index.model");
 
@@ -9,13 +8,14 @@ const { candidateModal, partyModel } = require("../../../infrastructure/models/i
 const candidateSignup = async (req: Request, res: Response) => {
   try {
     const { fullName, citizenshipNumber, province, district, municipality, ward, email, password } = req.body;
-    const firebaseStorageResponse = await uploadFileToFirebaseStorage(UPLOAD_FOLDER_PATH, req?.file?.filename, "candidates");
-    const imgHostedURL = firebaseStorageResponse[0]?.metadata?.mediaLink;
+    const filepath = UPLOAD_FOLDER_PATH ?? "" + req?.file?.filename ?? "";
+
+    
 
     const response = await new candidateModal({
       fullName, citizenshipNumber,
       province, district, municipality,
-      ward, email, password, profile: imgHostedURL,
+      ward, email, password, profile: filepath,
       createdAt: Date.now()
     }).save();
 
@@ -56,8 +56,8 @@ const getCandidateLists = async (req: Request, res: Response) => {
 const partySignup = async (req: Request, res: Response) => {
   try {
     const { partyName, totalMembers, agenda } = req.body;
-    const firebaseStorageResponse = await uploadFileToFirebaseStorage(UPLOAD_FOLDER_PATH, req?.file?.filename, "party");
-    const imgHostedURL = firebaseStorageResponse[0]?.metadata?.mediaLink;
+
+    const imgHostedURL = UPLOAD_FOLDER_PATH+req?.file?.filename;
 
     const response = await new partyModel({
       partyName, totalMembers, agenda, logo: imgHostedURL,

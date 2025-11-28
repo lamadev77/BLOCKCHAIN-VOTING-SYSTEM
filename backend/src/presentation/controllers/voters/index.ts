@@ -1,20 +1,18 @@
 import { Request, Response } from 'express';
 
 const { UPLOAD_FOLDER_PATH } = require("../../../constants/index");
-const { uploadFileToFirebaseStorage } = require("../../../domain/services/index");
-
 const { voterModel } = require("../../../infrastructure/models/index.model");
 
 const voterSignup = async (req: Request, res: Response) => {
   try {
     const { fullName, citizenshipNumber, province, district, municipality, ward, email, password } = req.body;
-    const firebaseStorageResponse = await uploadFileToFirebaseStorage(UPLOAD_FOLDER_PATH, req?.file?.filename, "voters");
-    const imgHostedURL = firebaseStorageResponse[0]?.metadata?.mediaLink;
 
+    const filepath = (UPLOAD_FOLDER_PATH ?? "") + (req?.file?.filename ?? "");
+    
     const result = await new voterModel({
       fullName, citizenshipNumber,
       province, district, municipality,
-      ward, email, password, profile: imgHostedURL,
+      ward, email, password, profile: filepath,
       createdAt: Date.now()
     }).save();
 

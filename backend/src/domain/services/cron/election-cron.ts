@@ -1,8 +1,9 @@
 const cron = require("node-cron");
-require("../../../../configs/index");
+const { pusherInstance } = require("../../../../configs");
 
 
 const startJob = (startDate: string, endDate: string) => {
+  console.log("enter..")
   // convert date form
   const startDateFormat = new Date(startDate);
   const endDateFormat = new Date(endDate);

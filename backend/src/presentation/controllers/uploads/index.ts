@@ -1,19 +1,16 @@
 import { Request, Response } from 'express';
 
 const { UPLOAD_FOLDER_PATH } = require("../../../constants/index");
-const { uploadFileToFirebaseStorage } = require("../../../domain/services/index");
 
 const uploadFile = async (req: Request, res: Response) => {
   try {
     const arr = req?.files as Express.Multer.File[];
 
-    const promises = arr.map(async (d: any) => {
-      const firebaseStorageResponse = await uploadFileToFirebaseStorage(UPLOAD_FOLDER_PATH, d.filename, "uploads");
-
-      return firebaseStorageResponse[0]?.metadata?.mediaLink;
-    });
-
-    const imgHostedURL = await Promise.all(promises);
+    const imgHostedURL: string[] = [];
+    arr.forEach(d => {
+      const uploadFilepath = UPLOAD_FOLDER_PATH + d.filename;
+      imgHostedURL.push(uploadFilepath)
+    })
 
     res.status(200).send({
       message: "File uploaded successfully",
