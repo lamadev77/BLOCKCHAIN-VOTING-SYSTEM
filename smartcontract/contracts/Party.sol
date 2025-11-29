@@ -1,12 +1,12 @@
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
 import "./Structure.sol";
 import "./Auth.sol";
 
 contract Party is Structure, Auth{
-    using SafeMath for uint;
+    // using SafeMath for uint;
     
     // Mapping 
     mapping (address => Party) public parties;
@@ -23,7 +23,7 @@ contract Party is Structure, Auth{
     event PartyCreated(Party party);
 
     // setter functions
-    function addParty(string memory _name, uint _totalMember, string memory _agenda, string memory _logoUrl) public payable {
+    function addParty(string memory _name, uint _totalMember, string memory _agenda, string memory _logoUrl) public payable virtual {
         if(msg.sender != adminAddress){
             revert("Only admin is allow to add Party !");
         }
@@ -34,7 +34,8 @@ contract Party is Structure, Auth{
         parties[adminAddress] = party;
         partyNames.push(_name);
         partyList.push(party);
-        totalParty = totalParty.add(1);
+        // totalParty = totalParty.add(1);
+        totalParty++;
 
         emit PartyCreated(party);
     }

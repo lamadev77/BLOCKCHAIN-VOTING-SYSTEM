@@ -1,11 +1,11 @@
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
-import "../common/Structure.sol";
-import "../common/Utils.sol";
+import "./Structure.sol";
+import "./Utils.sol";
 
 contract Candidate is Structure, Utils{
-    using SafeMath for uint;
+    // using SafeMath for uint;
 
     // Mapping 
     mapping (address => Candidate) public candidates;
@@ -22,7 +22,7 @@ contract Candidate is Structure, Utils{
     function addCandidate(string memory _name, uint _citizenshipNo, uint _age, string memory _agenda, string memory _dob,
         string memory _email, string memory _profile, string memory _partyName, string memory _province, string memory _district, 
         string memory _municipality, string memory _ward, string memory _gender
-    ) public payable {
+    ) public payable virtual {
         address[] memory votedVoterLists;
         address _id = msg.sender;
 
@@ -45,7 +45,8 @@ contract Candidate is Structure, Utils{
         candidates[_id] = candidate;
         candidateNames.push(_name);
         candidateList.push(candidate);
-        totalCandidate = totalCandidate.add(1);
+        // totalCandidate = totalCandidate.add(1);
+        totalCandidate++;
 
         emit CandidateCreated(candidate);
     }

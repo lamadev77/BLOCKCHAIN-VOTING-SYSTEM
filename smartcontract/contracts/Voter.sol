@@ -1,13 +1,13 @@
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
 import "./Structure.sol";
 import "./Candidate.sol";
 import "./Auth.sol";
 
 contract Voter is Structure, Candidate, Auth{
-    using SafeMath for uint;
+    // using SafeMath for uint;
 
     // Mapping 
     mapping (address => Voter) public voters;
@@ -39,8 +39,8 @@ contract Voter is Structure, Candidate, Auth{
 
         candidates[_candidateId].votedVoterLists.push(_voterId);
         voters[_voterId].votedCandidateList.push(_candidateId);
-        candidates[_candidateId].voteCount = candidates[_candidateId].voteCount.add(1);
-        voteCount = voteCount.add(1); 
+        candidates[_candidateId].voteCount = candidates[_candidateId].voteCount + 1;
+        voteCount = voteCount + 1;
 
         for(uint i=0;i<candidateList.length;i++){
             if(candidateList[i].user._id == _candidateId){
@@ -54,7 +54,7 @@ contract Voter is Structure, Candidate, Auth{
             }
         }
 
-        voters[_voterId].voteLimitCount = voters[_voterId].voteLimitCount.add(1);
+        voters[_voterId].voteLimitCount = voters[_voterId].voteLimitCount + 1;
         
 
         emit VoteCast(candidates[_candidateId]);

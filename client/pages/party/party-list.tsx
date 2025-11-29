@@ -36,13 +36,13 @@ const Details: React.FC = (): React.ReactElement => {
   useEffect(() => {
     fetchAllData();
 
-    partyEvent = SmartContract.events?.PartyCreated().on("data", (event: any) => {
-      fetchAllData();
-    }).on("error", () => console.error("PartyCreated Event Error !"));
+    // partyEvent = SmartContract.events?.PartyCreated().on("data", (event: any) => {
+    //   fetchAllData();
+    // }).on("error", () => console.error("PartyCreated Event Error !"));
 
-    return () => {
-      partyEvent && partyEvent?.unsubscribe();
-    }
+    // return () => {
+    //   partyEvent && partyEvent?.unsubscribe();
+    // }
   }, []);
 
   const openAgendaPreview = (partyDetails) => {

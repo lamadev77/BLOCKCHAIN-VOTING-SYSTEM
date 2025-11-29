@@ -1,0 +1,1720 @@
+{
+  "contractName": "Party",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalMember",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "agenda",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "logoUrl",
+              "type": "string"
+            },
+            {
+              "internalType": "address[]",
+              "name": "members",
+              "type": "address[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct Structure.Party",
+          "name": "party",
+          "type": "tuple"
+        }
+      ],
+      "name": "PartyCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "adminAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_id",
+          "type": "address"
+        }
+      ],
+      "name": "isAdmin",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "parties",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalMember",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "agenda",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "logoUrl",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "partyList",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "totalMember",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "agenda",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "logoUrl",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "partyNames",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalParty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_totalMember",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_agenda",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_logoUrl",
+          "type": "string"
+        }
+      ],
+      "name": "addParty",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllParties",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalMember",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "agenda",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "logoUrl",
+              "type": "string"
+            },
+            {
+              "internalType": "address[]",
+              "name": "members",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct Structure.Party[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "getPartyDetails",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "totalMember",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "agenda",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "logoUrl",
+              "type": "string"
+            },
+            {
+              "internalType": "address[]",
+              "name": "members",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct Structure.Party",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"logoUrl\",\"type\":\"string\"},{\"internalType\":\"address[]\",\"name\":\"members\",\"type\":\"address[]\"}],\"indexed\":false,\"internalType\":\"struct Structure.Party\",\"name\":\"party\",\"type\":\"tuple\"}],\"name\":\"PartyCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_logoUrl\",\"type\":\"string\"}],\"name\":\"addParty\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"adminAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAllParties\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"logoUrl\",\"type\":\"string\"},{\"internalType\":\"address[]\",\"name\":\"members\",\"type\":\"address[]\"}],\"internalType\":\"struct Structure.Party[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"getPartyDetails\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"logoUrl\",\"type\":\"string\"},{\"internalType\":\"address[]\",\"name\":\"members\",\"type\":\"address[]\"}],\"internalType\":\"struct Structure.Party\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_id\",\"type\":\"address\"}],\"name\":\"isAdmin\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"parties\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"logoUrl\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"partyList\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"totalMember\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"agenda\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"logoUrl\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"partyNames\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalParty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Party.sol\":\"Party\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Auth.sol\":{\"keccak256\":\"0xaa552d1be4ed44df3b1e768a104370d032084b1427b4e17d81dcc7271600c1ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e5ed0c0a5305f077eee47e60884608f4e6edbfef5d9ad3d57228c42d3126a943\",\"dweb:/ipfs/QmQ7JZeeZQwi6CmDd61G81N5RioQXxsbx4MoKRUSKkbqe6\"]},\"project:/contracts/Party.sol\":{\"keccak256\":\"0x6d2ed907325eecabc6040d2aa38a077982cc30fb5bd257478cf4a02164bb4c5d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bfe652a77790e71fdc02664d57fc1cc51a09442413c0e4c9931003e48b242a51\",\"dweb:/ipfs/QmST3NGHiCScddSofYgJBJZf2zSASbdjXKPcxQGGcao2f6\"]},\"project:/contracts/Structure.sol\":{\"keccak256\":\"0xa226e3238a20b932fee0857e2f33ec8e21276ff86281bfd708e571d56ff8aa8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4e6716cada984b35322aee2983b8a95edd86bcccddba4f8caa857fe1d99726ae\",\"dweb:/ipfs/QmTiBagREWMA4xzr8SEFwJJhgg8zPNDKr39QFrSqHKpyAU\"]}},\"version\":1}",
+  "bytecode": "0x6080806040523461002b57600080546001600160a01b03191633178155600455610c5a90816100318239f35b600080fdfe608060408181526004918236101561001657600080fd5b600092833560e01c918262da722814610630575081631d50384b146103dd57816324d7806c146103a55781634f23520714610346578163640e79b71461023e578163b867bfcc1461013a578163f3845166146100d3578163f7c4c25a146100b1575063fc6f94681461008757600080fd5b346100ad57816003193601126100ad57905490516001600160a01b039091168152602090f35b5080fd5b9050346100cf57826003193601126100cf5760209250549051908152f35b8280fd5b9050346100cf5760203660031901126100cf57356003548110156100cf5761012390600361013694527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b01610871565b90519182916020835260208301906106a9565b0390f35b839150346100ad57816003193601126100ad576002549067ffffffffffffffff821161022b5750825191602092610176848460051b01826107b9565b8281526002825283810192827f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace855b83831061020657505050508451938085019181865251809252858501958260051b8601019392955b8287106101da5785850386f35b9091929382806101f6600193603f198a820301865288516106e9565b96019201960195929190926101cd565b600688600192610219859b98999b610b68565b815201920192019190969493966101a5565b634e487b7160e01b835260419052602482fd5b9050346100cf5760203660031901126100cf57356002548110156100cf5760026006929352029061013660018060a01b03837f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace015416916102c07f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5acf8501610871565b937f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad081015461033b7f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad26103347f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad18501610871565b9301610871565b925195869586610917565b8383346100ad5760203660031901126100ad576001600160a01b03918335838116908190036100ad57918161013693829352600160205220928354169261038f60018201610871565b9461033b60028301549161033460038501610871565b9050346100cf5760203660031901126100cf57356001600160a01b03818116918290036103d9576020935416149051908152f35b8380fd5b91905060803660031901126100cf5767ffffffffffffffff91803583811161062c5761040c90369083016107db565b926044358181116106285761042490369084016107db565b906064359081116106285761043c90369084016107db565b85549094906001600160a01b0316338190036105da5784519561045e87610787565b81875282602088015260249384358789015260608801526080870152606060a08701528652600160205261049485858820610a80565b60035490600160401b91828110156105c85760018101806003558110156105b657906104e591600389527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0161097b565b600254908110156105a4576001810180600255811015610592578460066105329260028952027f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace01610a80565b8154906000198214610581575060010190555160208082527fa9842a716bc2513f613d9faf736ca365fe3689a18ea2c3ef8bb9402c98a060c192829161057b91908301906106e9565b0390a180f35b634e487b7160e01b86526011835285fd5b50634e487b7160e01b85526032825284fd5b50634e487b7160e01b85526041825284fd5b634e487b7160e01b8852603285528388fd5b634e487b7160e01b8852604185528388fd5b845162461bcd60e51b8152602081860152602260248201527f4f6e6c792061646d696e20697320616c6c6f7720746f20616464205061727479604482015261202160f01b6064820152608490fd5b8580fd5b8480fd5b9150346103d95760203660031901126103d957356001600160a01b03811691908290036103d9576101369361069692606060a08461066e8896610787565b8481528260208201528486820152828082015282608082015201528152600160205220610b68565b90519182916020835260208301906106e9565b919082519283825260005b8481106106d5575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016106b4565b60018060a01b039081815116835260209060a06107476107356107198585015160c0878a015260c08901906106a9565b60408501516040890152606085015188820360608a01526106a9565b608084015187820360808901526106a9565b9101519360a081830391015281808551928381520194019160005b82811061077157505050505090565b8351851686529481019492810192600101610762565b60c0810190811067ffffffffffffffff8211176107a357604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff8211176107a357604052565b81601f820112156108325780359067ffffffffffffffff82116107a35760405192610810601f8401601f1916602001856107b9565b8284526020838301011161083257816000926020809301838601378301015290565b600080fd5b90600182811c92168015610867575b602083101461085157565b634e487b7160e01b600052602260045260246000fd5b91607f1691610846565b906040519182600082549261088584610837565b9081845260019485811690816000146108f457506001146108b1575b50506108af925003836107b9565b565b9093915060005260209081600020936000915b8183106108dc5750506108af935082010138806108a1565b855488840185015294850194879450918301916108c4565b9150506108af94506020925060ff191682840152151560051b82010138806108a1565b936109406109539361096197959360018060a01b0316875260a0602088015260a08701906106a9565b91604086015284820360608601526106a9565b9160808184039101526106a9565b90565b81811061096f575050565b60008155600101610964565b919091825167ffffffffffffffff81116107a3576109998254610837565b601f8111610a43575b50602080601f83116001146109df5750819293946000926109d4575b50508160011b916000199060031b1c1916179055565b0151905038806109be565b90601f198316958460005282600020926000905b888210610a2b57505083600195969710610a12575b505050811b019055565b015160001960f88460031b161c19169055388080610a08565b806001859682949686015181550195019301906109f3565b610a7090836000526020600020601f840160051c81019160208510610a76575b601f0160051c0190610964565b386109a2565b9091508190610a63565b9060018060a01b0390818151166bffffffffffffffffffffffff60a01b84541617835560209160a060058484015195610abd60019788830161097b565b60408501516002820155610ad860608601516003830161097b565b610ae960808601516004830161097b565b019201519283519367ffffffffffffffff85116107a357600160401b85116107a35781908454868655808710610b4b575b500192600052806000209160005b858110610b385750505050505050565b8451821684820155938201938601610b28565b610b62908660005287846000209182019101610964565b38610b1a565b9060405191610b7683610787565b80546001600160a01b0390811684526001918491906005610b98828601610871565b916020928386015260028101546040860152610bb660038201610871565b6060860152610bc760048201610871565b608086015201906040519485869483855492838152019460005283600020936000915b838310610c0a5750505050505060a09291610c069103846107b9565b0152565b855481168752899750958101959484019491840191610bea56fea2646970667358221220c26f0f89285fde535f8abb9e03d2e856a19f31a8cde89f3e12cc6244d6d5c96c64736f6c63430008110033",
+  "deployedBytecode": "0x608060408181526004918236101561001657600080fd5b600092833560e01c918262da722814610630575081631d50384b146103dd57816324d7806c146103a55781634f23520714610346578163640e79b71461023e578163b867bfcc1461013a578163f3845166146100d3578163f7c4c25a146100b1575063fc6f94681461008757600080fd5b346100ad57816003193601126100ad57905490516001600160a01b039091168152602090f35b5080fd5b9050346100cf57826003193601126100cf5760209250549051908152f35b8280fd5b9050346100cf5760203660031901126100cf57356003548110156100cf5761012390600361013694527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b01610871565b90519182916020835260208301906106a9565b0390f35b839150346100ad57816003193601126100ad576002549067ffffffffffffffff821161022b5750825191602092610176848460051b01826107b9565b8281526002825283810192827f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace855b83831061020657505050508451938085019181865251809252858501958260051b8601019392955b8287106101da5785850386f35b9091929382806101f6600193603f198a820301865288516106e9565b96019201960195929190926101cd565b600688600192610219859b98999b610b68565b815201920192019190969493966101a5565b634e487b7160e01b835260419052602482fd5b9050346100cf5760203660031901126100cf57356002548110156100cf5760026006929352029061013660018060a01b03837f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace015416916102c07f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5acf8501610871565b937f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad081015461033b7f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad26103347f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ad18501610871565b9301610871565b925195869586610917565b8383346100ad5760203660031901126100ad576001600160a01b03918335838116908190036100ad57918161013693829352600160205220928354169261038f60018201610871565b9461033b60028301549161033460038501610871565b9050346100cf5760203660031901126100cf57356001600160a01b03818116918290036103d9576020935416149051908152f35b8380fd5b91905060803660031901126100cf5767ffffffffffffffff91803583811161062c5761040c90369083016107db565b926044358181116106285761042490369084016107db565b906064359081116106285761043c90369084016107db565b85549094906001600160a01b0316338190036105da5784519561045e87610787565b81875282602088015260249384358789015260608801526080870152606060a08701528652600160205261049485858820610a80565b60035490600160401b91828110156105c85760018101806003558110156105b657906104e591600389527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0161097b565b600254908110156105a4576001810180600255811015610592578460066105329260028952027f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace01610a80565b8154906000198214610581575060010190555160208082527fa9842a716bc2513f613d9faf736ca365fe3689a18ea2c3ef8bb9402c98a060c192829161057b91908301906106e9565b0390a180f35b634e487b7160e01b86526011835285fd5b50634e487b7160e01b85526032825284fd5b50634e487b7160e01b85526041825284fd5b634e487b7160e01b8852603285528388fd5b634e487b7160e01b8852604185528388fd5b845162461bcd60e51b8152602081860152602260248201527f4f6e6c792061646d696e20697320616c6c6f7720746f20616464205061727479604482015261202160f01b6064820152608490fd5b8580fd5b8480fd5b9150346103d95760203660031901126103d957356001600160a01b03811691908290036103d9576101369361069692606060a08461066e8896610787565b8481528260208201528486820152828082015282608082015201528152600160205220610b68565b90519182916020835260208301906106e9565b919082519283825260005b8481106106d5575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016106b4565b60018060a01b039081815116835260209060a06107476107356107198585015160c0878a015260c08901906106a9565b60408501516040890152606085015188820360608a01526106a9565b608084015187820360808901526106a9565b9101519360a081830391015281808551928381520194019160005b82811061077157505050505090565b8351851686529481019492810192600101610762565b60c0810190811067ffffffffffffffff8211176107a357604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff8211176107a357604052565b81601f820112156108325780359067ffffffffffffffff82116107a35760405192610810601f8401601f1916602001856107b9565b8284526020838301011161083257816000926020809301838601378301015290565b600080fd5b90600182811c92168015610867575b602083101461085157565b634e487b7160e01b600052602260045260246000fd5b91607f1691610846565b906040519182600082549261088584610837565b9081845260019485811690816000146108f457506001146108b1575b50506108af925003836107b9565b565b9093915060005260209081600020936000915b8183106108dc5750506108af935082010138806108a1565b855488840185015294850194879450918301916108c4565b9150506108af94506020925060ff191682840152151560051b82010138806108a1565b936109406109539361096197959360018060a01b0316875260a0602088015260a08701906106a9565b91604086015284820360608601526106a9565b9160808184039101526106a9565b90565b81811061096f575050565b60008155600101610964565b919091825167ffffffffffffffff81116107a3576109998254610837565b601f8111610a43575b50602080601f83116001146109df5750819293946000926109d4575b50508160011b916000199060031b1c1916179055565b0151905038806109be565b90601f198316958460005282600020926000905b888210610a2b57505083600195969710610a12575b505050811b019055565b015160001960f88460031b161c19169055388080610a08565b806001859682949686015181550195019301906109f3565b610a7090836000526020600020601f840160051c81019160208510610a76575b601f0160051c0190610964565b386109a2565b9091508190610a63565b9060018060a01b0390818151166bffffffffffffffffffffffff60a01b84541617835560209160a060058484015195610abd60019788830161097b565b60408501516002820155610ad860608601516003830161097b565b610ae960808601516004830161097b565b019201519283519367ffffffffffffffff85116107a357600160401b85116107a35781908454868655808710610b4b575b500192600052806000209160005b858110610b385750505050505050565b8451821684820155938201938601610b28565b610b62908660005287846000209182019101610964565b38610b1a565b9060405191610b7683610787565b80546001600160a01b0390811684526001918491906005610b98828601610871565b916020928386015260028101546040860152610bb660038201610871565b6060860152610bc760048201610871565b608086015201906040519485869483855492838152019460005283600020936000915b838310610c0a5750505050505060a09291610c069103846107b9565b0152565b855481168752899750958101959484019491840191610bea56fea2646970667358221220c26f0f89285fde535f8abb9e03d2e856a19f31a8cde89f3e12cc6244d6d5c96c64736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "218:1202:5:-:0;;;;;;;137:25:0;218:1202:5;;-1:-1:-1;;;;;;218:1202:5;152:10:0;218:1202:5;;;487:1;218:1202;;;;;;;;;;;",
+  "deployedSourceMap": "218:1202:5:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;218:1202:5;;;;;;;402:26;;;;;218:1202;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1285:9;218:1202;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;1285:9;218:1202;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;;;218:1202:5;;;;;;;;;;;;;;;;-1:-1:-1;;218:1202:5;;;;;372:24;218:1202;372:24;;;;;;218:1202;;;;;;;;;;;;;;;;;372:24;;;;;;:::i;:::-;;;;;218:1202;372:24;;;;;;;:::i;:::-;;;;:::i;:::-;218:1202;;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;218:1202:5;;;;-1:-1:-1;;;;;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;310:41;;218:1202;310:41;;;:::i;:::-;;;;;;218:1202;310:41;;218:1202;310:41;;;:::i;218:1202::-;;;;;;;;-1:-1:-1;;218:1202:5;;;;;-1:-1:-1;;;;;218:1202:5;;;;;;;;;;;;;248:19:0;218:1202:5;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;-1:-1:-1;;218:1202:5;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;;;;218:1202:5;724:10;:26;;;721:99;;218:1202;;;;;;:::i;:::-;;;;888:71;218:1202;888:71;;218:1202;;;;;888:71;;;218:1202;;888:71;;218:1202;;888:71;;218:1202;;;888:71;;218:1202;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1049:9;218:1202;;;;;;;;;;;1049:9;218:1202;;;;;;;;;;1049:9;218:1202;;;;;;:::i;:::-;;;;-1:-1:-1;;218:1202:5;;;;-1:-1:-1;218:1202:5;;;;;;;;;1151:19;;218:1202;;;;;;;;;:::i;:::-;1151:19;;;218:1202;;;-1:-1:-1;;;218:1202:5;;;;;;;;-1:-1:-1;;;;218:1202:5;;;;;;;;-1:-1:-1;;;;218:1202:5;;;;;;;;-1:-1:-1;;;218:1202:5;;;;;;;;;-1:-1:-1;;;218:1202:5;;;;;;;;721:99;218:1202;;-1:-1:-1;;;765:44:5;;218:1202;765:44;;;218:1202;;;;;;;;;;;-1:-1:-1;;;218:1202:5;;;;;;765:44;218:1202;;;;;;;;;;;;;;;;-1:-1:-1;;218:1202:5;;;;;-1:-1:-1;;;;;218:1202:5;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;218:1202:5;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;:::o;:::-;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;;;-1:-1:-1;218:1202:5;;;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;:::o;:::-;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;218:1202:5;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;;-1:-1:-1;218:1202:5;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;;;;218:1202:5;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;-1:-1:-1;218:1202:5;;;;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier:MIT\npragma solidity ^0.8.0;\n\n// import \"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol\";\nimport \"./Structure.sol\";\nimport \"./Auth.sol\";\n\ncontract Party is Structure, Auth{\n    // using SafeMath for uint;\n    \n    // Mapping \n    mapping (address => Party) public parties;\n\n    // Arrays\n    Party[] public partyList;\n    string[] public partyNames;\n\n\n    // counter varirables\n    uint public totalParty = 0;\n\n    // Event abstractions\n    event PartyCreated(Party party);\n\n    // setter functions\n    function addParty(string memory _name, uint _totalMember, string memory _agenda, string memory _logoUrl) public payable virtual {\n        if(msg.sender != adminAddress){\n            revert(\"Only admin is allow to add Party !\");\n        }\n\n        address[] memory emptyArray;\n        Party memory party = Party(adminAddress, _name, _totalMember, _agenda, _logoUrl, emptyArray);\n        \n        parties[adminAddress] = party;\n        partyNames.push(_name);\n        partyList.push(party);\n        // totalParty = totalParty.add(1);\n        totalParty++;\n\n        emit PartyCreated(party);\n    }\n\n    // getter functions\n    function getAllParties() public view returns (Party[] memory){\n        return partyList;\n    }\n\n    function getPartyDetails(address owner) public view returns(Party memory){\n        return parties[owner];\n    }\n}\n\n\n\n\n// test data\n// Parbat, 0778, 22, wanna make secure system, sep 12 2022, kathamandu nepal, parbat@gmail.com, http://profile.com, Congress\n// Gaurab, 0778, 22, oct 11 2022, garuab@gmail.com, http://profile.com, madhesh ,sarlahi,barahathawa, 9 \n\n\n// create election\n// Election 2022, hello world election, sep 12 2022 , sep 13 2022, province\n\n// add faq & reply\n// UI design issues, please maintain your desing, https://file.png, 2023-23-23T1-23-12\n// 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, yes it caused problem, 2023-34-23T2-34-23\n",
+  "sourcePath": "/Users/parbatlama/Documents/BLOCKCHAIN-ELECTION-DAPP/smartcontract/contracts/Party.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Party.sol",
+    "exportedSymbols": {
+      "Auth": [
+        50
+      ],
+      "Party": [
+        1822
+      ],
+      "Structure": [
+        2245
+      ]
+    },
+    "id": 1823,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1707,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "31:23:5"
+      },
+      {
+        "absolutePath": "project:/contracts/Structure.sol",
+        "file": "./Structure.sol",
+        "id": 1708,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1823,
+        "sourceUnit": 2246,
+        "src": "170:25:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/Auth.sol",
+        "file": "./Auth.sol",
+        "id": 1709,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1823,
+        "sourceUnit": 51,
+        "src": "196:20:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 1710,
+              "name": "Structure",
+              "nameLocations": [
+                "236:9:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2245,
+              "src": "236:9:5"
+            },
+            "id": 1711,
+            "nodeType": "InheritanceSpecifier",
+            "src": "236:9:5"
+          },
+          {
+            "baseName": {
+              "id": 1712,
+              "name": "Auth",
+              "nameLocations": [
+                "247:4:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 50,
+              "src": "247:4:5"
+            },
+            "id": 1713,
+            "nodeType": "InheritanceSpecifier",
+            "src": "247:4:5"
+          }
+        ],
+        "canonicalName": "Party",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1822,
+        "linearizedBaseContracts": [
+          1822,
+          50,
+          2245
+        ],
+        "name": "Party",
+        "nameLocation": "227:5:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "4f235207",
+            "id": 1718,
+            "mutability": "mutable",
+            "name": "parties",
+            "nameLocation": "344:7:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1822,
+            "src": "310:41:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Party_$2206_storage_$",
+              "typeString": "mapping(address => struct Structure.Party)"
+            },
+            "typeName": {
+              "id": 1717,
+              "keyType": {
+                "id": 1714,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "319:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "310:26:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Party_$2206_storage_$",
+                "typeString": "mapping(address => struct Structure.Party)"
+              },
+              "valueType": {
+                "id": 1716,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 1715,
+                  "name": "Party",
+                  "nameLocations": [
+                    "330:5:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2206,
+                  "src": "330:5:5"
+                },
+                "referencedDeclaration": 2206,
+                "src": "330:5:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                  "typeString": "struct Structure.Party"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "640e79b7",
+            "id": 1722,
+            "mutability": "mutable",
+            "name": "partyList",
+            "nameLocation": "387:9:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1822,
+            "src": "372:24:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Party_$2206_storage_$dyn_storage",
+              "typeString": "struct Structure.Party[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 1720,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 1719,
+                  "name": "Party",
+                  "nameLocations": [
+                    "372:5:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 2206,
+                  "src": "372:5:5"
+                },
+                "referencedDeclaration": 2206,
+                "src": "372:5:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                  "typeString": "struct Structure.Party"
+                }
+              },
+              "id": 1721,
+              "nodeType": "ArrayTypeName",
+              "src": "372:7:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Party_$2206_storage_$dyn_storage_ptr",
+                "typeString": "struct Structure.Party[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "f3845166",
+            "id": 1725,
+            "mutability": "mutable",
+            "name": "partyNames",
+            "nameLocation": "418:10:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1822,
+            "src": "402:26:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 1723,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "402:6:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 1724,
+              "nodeType": "ArrayTypeName",
+              "src": "402:8:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "f7c4c25a",
+            "id": 1728,
+            "mutability": "mutable",
+            "name": "totalParty",
+            "nameLocation": "474:10:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 1822,
+            "src": "462:26:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1726,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "462:4:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 1727,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "487:1:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "a9842a716bc2513f613d9faf736ca365fe3689a18ea2c3ef8bb9402c98a060c1",
+            "id": 1733,
+            "name": "PartyCreated",
+            "nameLocation": "527:12:5",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1731,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "party",
+                  "nameLocation": "546:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1733,
+                  "src": "540:11:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                    "typeString": "struct Structure.Party"
+                  },
+                  "typeName": {
+                    "id": 1730,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1729,
+                      "name": "Party",
+                      "nameLocations": [
+                        "540:5:5"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2206,
+                      "src": "540:5:5"
+                    },
+                    "referencedDeclaration": 2206,
+                    "src": "540:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                      "typeString": "struct Structure.Party"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "539:13:5"
+            },
+            "src": "521:32:5"
+          },
+          {
+            "body": {
+              "id": 1797,
+              "nodeType": "Block",
+              "src": "711:466:5",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 1747,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 1744,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "724:3:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1745,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "728:6:5",
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "724:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "id": 1746,
+                      "name": "adminAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "738:12:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "724:26:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1753,
+                  "nodeType": "IfStatement",
+                  "src": "721:99:5",
+                  "trueBody": {
+                    "id": 1752,
+                    "nodeType": "Block",
+                    "src": "751:69:5",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "hexValue": "4f6e6c792061646d696e20697320616c6c6f7720746f206164642050617274792021",
+                              "id": 1749,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "772:36:5",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_374c12367e15d48297e4e0ab01580369019d6171cc1b3f2394026b4ffdbd68ef",
+                                "typeString": "literal_string \"Only admin is allow to add Party !\""
+                              },
+                              "value": "Only admin is allow to add Party !"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_374c12367e15d48297e4e0ab01580369019d6171cc1b3f2394026b4ffdbd68ef",
+                                "typeString": "literal_string \"Only admin is allow to add Party !\""
+                              }
+                            ],
+                            "id": 1748,
+                            "name": "revert",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              4294967277,
+                              4294967277
+                            ],
+                            "referencedDeclaration": 4294967277,
+                            "src": "765:6:5",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory) pure"
+                            }
+                          },
+                          "id": 1750,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "765:44:5",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 1751,
+                        "nodeType": "ExpressionStatement",
+                        "src": "765:44:5"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "assignments": [
+                    1758
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1758,
+                      "mutability": "mutable",
+                      "name": "emptyArray",
+                      "nameLocation": "847:10:5",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1797,
+                      "src": "830:27:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                        "typeString": "address[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 1756,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "830:7:5",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 1757,
+                        "nodeType": "ArrayTypeName",
+                        "src": "830:9:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                          "typeString": "address[]"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1759,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "830:27:5"
+                },
+                {
+                  "assignments": [
+                    1762
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1762,
+                      "mutability": "mutable",
+                      "name": "party",
+                      "nameLocation": "880:5:5",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1797,
+                      "src": "867:18:5",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                        "typeString": "struct Structure.Party"
+                      },
+                      "typeName": {
+                        "id": 1761,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 1760,
+                          "name": "Party",
+                          "nameLocations": [
+                            "867:5:5"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 2206,
+                          "src": "867:5:5"
+                        },
+                        "referencedDeclaration": 2206,
+                        "src": "867:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                          "typeString": "struct Structure.Party"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1771,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 1764,
+                        "name": "adminAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3,
+                        "src": "894:12:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 1765,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1735,
+                        "src": "908:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 1766,
+                        "name": "_totalMember",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1737,
+                        "src": "915:12:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 1767,
+                        "name": "_agenda",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1739,
+                        "src": "929:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 1768,
+                        "name": "_logoUrl",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1741,
+                        "src": "938:8:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 1769,
+                        "name": "emptyArray",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1758,
+                        "src": "948:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      ],
+                      "id": 1763,
+                      "name": "Party",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2206,
+                      "src": "888:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Party_$2206_storage_ptr_$",
+                        "typeString": "type(struct Structure.Party storage pointer)"
+                      }
+                    },
+                    "id": 1770,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "888:71:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                      "typeString": "struct Structure.Party memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "867:92:5"
+                },
+                {
+                  "expression": {
+                    "id": 1776,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 1772,
+                        "name": "parties",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1718,
+                        "src": "978:7:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Party_$2206_storage_$",
+                          "typeString": "mapping(address => struct Structure.Party storage ref)"
+                        }
+                      },
+                      "id": 1774,
+                      "indexExpression": {
+                        "id": 1773,
+                        "name": "adminAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3,
+                        "src": "986:12:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "978:21:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Party_$2206_storage",
+                        "typeString": "struct Structure.Party storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1775,
+                      "name": "party",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1762,
+                      "src": "1002:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                        "typeString": "struct Structure.Party memory"
+                      }
+                    },
+                    "src": "978:29:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Party_$2206_storage",
+                      "typeString": "struct Structure.Party storage ref"
+                    }
+                  },
+                  "id": 1777,
+                  "nodeType": "ExpressionStatement",
+                  "src": "978:29:5"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1781,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1735,
+                        "src": "1033:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 1778,
+                        "name": "partyNames",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1725,
+                        "src": "1017:10:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                          "typeString": "string storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1780,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1028:4:5",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1017:15:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_string_storage_$dyn_storage_ptr_$_t_string_storage_$returns$__$bound_to$_t_array$_t_string_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (string storage ref[] storage pointer,string storage ref)"
+                      }
+                    },
+                    "id": 1782,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1017:22:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1783,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1017:22:5"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 1787,
+                        "name": "party",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1762,
+                        "src": "1064:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                          "typeString": "struct Structure.Party memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                          "typeString": "struct Structure.Party memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 1784,
+                        "name": "partyList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1722,
+                        "src": "1049:9:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Party_$2206_storage_$dyn_storage",
+                          "typeString": "struct Structure.Party storage ref[] storage ref"
+                        }
+                      },
+                      "id": 1786,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1059:4:5",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "1049:14:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Party_$2206_storage_$dyn_storage_ptr_$_t_struct$_Party_$2206_storage_$returns$__$bound_to$_t_array$_t_struct$_Party_$2206_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct Structure.Party storage ref[] storage pointer,struct Structure.Party storage ref)"
+                      }
+                    },
+                    "id": 1788,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1049:21:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1789,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1049:21:5"
+                },
+                {
+                  "expression": {
+                    "id": 1791,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1123:12:5",
+                    "subExpression": {
+                      "id": 1790,
+                      "name": "totalParty",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1728,
+                      "src": "1123:10:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1792,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1123:12:5"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 1794,
+                        "name": "party",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1762,
+                        "src": "1164:5:5",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                          "typeString": "struct Structure.Party memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                          "typeString": "struct Structure.Party memory"
+                        }
+                      ],
+                      "id": 1793,
+                      "name": "PartyCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1733,
+                      "src": "1151:12:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_struct$_Party_$2206_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Structure.Party memory)"
+                      }
+                    },
+                    "id": 1795,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1151:19:5",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1796,
+                  "nodeType": "EmitStatement",
+                  "src": "1146:24:5"
+                }
+              ]
+            },
+            "functionSelector": "1d50384b",
+            "id": 1798,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addParty",
+            "nameLocation": "592:8:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1735,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "615:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1798,
+                  "src": "601:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1734,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "601:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1737,
+                  "mutability": "mutable",
+                  "name": "_totalMember",
+                  "nameLocation": "627:12:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1798,
+                  "src": "622:17:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1736,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "622:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1739,
+                  "mutability": "mutable",
+                  "name": "_agenda",
+                  "nameLocation": "655:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1798,
+                  "src": "641:21:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1738,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1741,
+                  "mutability": "mutable",
+                  "name": "_logoUrl",
+                  "nameLocation": "678:8:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1798,
+                  "src": "664:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1740,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "600:87:5"
+            },
+            "returnParameters": {
+              "id": 1743,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "711:0:5"
+            },
+            "scope": 1822,
+            "src": "583:594:5",
+            "stateMutability": "payable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1807,
+              "nodeType": "Block",
+              "src": "1268:33:5",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1805,
+                    "name": "partyList",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1722,
+                    "src": "1285:9:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Party_$2206_storage_$dyn_storage",
+                      "typeString": "struct Structure.Party storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1804,
+                  "id": 1806,
+                  "nodeType": "Return",
+                  "src": "1278:16:5"
+                }
+              ]
+            },
+            "functionSelector": "b867bfcc",
+            "id": 1808,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllParties",
+            "nameLocation": "1216:13:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1799,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1229:2:5"
+            },
+            "returnParameters": {
+              "id": 1804,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1803,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1808,
+                  "src": "1253:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Party_$2206_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Structure.Party[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1801,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1800,
+                        "name": "Party",
+                        "nameLocations": [
+                          "1253:5:5"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2206,
+                        "src": "1253:5:5"
+                      },
+                      "referencedDeclaration": 2206,
+                      "src": "1253:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                        "typeString": "struct Structure.Party"
+                      }
+                    },
+                    "id": 1802,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1253:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Party_$2206_storage_$dyn_storage_ptr",
+                      "typeString": "struct Structure.Party[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1252:16:5"
+            },
+            "scope": 1822,
+            "src": "1207:94:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1820,
+              "nodeType": "Block",
+              "src": "1380:38:5",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 1816,
+                      "name": "parties",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1718,
+                      "src": "1397:7:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Party_$2206_storage_$",
+                        "typeString": "mapping(address => struct Structure.Party storage ref)"
+                      }
+                    },
+                    "id": 1818,
+                    "indexExpression": {
+                      "id": 1817,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1810,
+                      "src": "1405:5:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1397:14:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Party_$2206_storage",
+                      "typeString": "struct Structure.Party storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 1815,
+                  "id": 1819,
+                  "nodeType": "Return",
+                  "src": "1390:21:5"
+                }
+              ]
+            },
+            "functionSelector": "00da7228",
+            "id": 1821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPartyDetails",
+            "nameLocation": "1316:15:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1810,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1340:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1821,
+                  "src": "1332:13:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1809,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1332:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1331:15:5"
+            },
+            "returnParameters": {
+              "id": 1815,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1814,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1821,
+                  "src": "1367:12:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Party_$2206_memory_ptr",
+                    "typeString": "struct Structure.Party"
+                  },
+                  "typeName": {
+                    "id": 1813,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1812,
+                      "name": "Party",
+                      "nameLocations": [
+                        "1367:5:5"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2206,
+                      "src": "1367:5:5"
+                    },
+                    "referencedDeclaration": 2206,
+                    "src": "1367:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Party_$2206_storage_ptr",
+                      "typeString": "struct Structure.Party"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1366:14:5"
+            },
+            "scope": 1822,
+            "src": "1307:111:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1823,
+        "src": "218:1202:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "31:1930:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-11-29T07:26:38.258Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

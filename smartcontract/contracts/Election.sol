@@ -1,12 +1,13 @@
 // SPDX-License-Identifier:MIT
 pragma solidity ^0.8.0;
 
-import "./src/components/Candidate.sol";
-import "./src/components/Voter.sol";
-import "./src/components/Party.sol";
+import "./Candidate.sol";
+import "./Voter.sol";
+import "./Party.sol";
+import "./Auth.sol";
 
 contract Election is Candidate, Voter, Party {
-    using SafeMath for uint256;
+    // using SafeMath for uint256;
 
     // Mapping
     mapping(string => Election) public elections;
@@ -17,11 +18,10 @@ contract Election is Candidate, Voter, Party {
     FAQ[] public faqList;
 
     // counter varirables
-    uint256 public totalParty = 0;
+    // uint256 public totalParty = 0;
     uint256 public totalElection = 0;
 
     // Event abstractions
-    event PartyCreated(Party party);
     event electionStart(Election election);
     event NewFaqAdded(FAQ faq);
 
@@ -53,8 +53,8 @@ contract Election is Candidate, Voter, Party {
         voters[_voterId].votedCandidateList.push(_candidateId);
         candidates[_candidateId].voteCount = candidates[_candidateId]
             .voteCount
-            .add(1);
-        voteCount = voteCount.add(1);
+            + 1;
+        voteCount = voteCount + 1;
 
 
         // update the copy data in election collections
@@ -63,7 +63,7 @@ contract Election is Candidate, Voter, Party {
                 for(uint256 j = 0; j< electionList[i].candidates.length;j++){
                     if(electionList[i].candidates[j].user._id == _candidateId){
                         electionList[i].candidates[j].votedVoterLists.push(_voterId);
-                        electionList[i].candidates[j].voteCount = electionList[i].candidates[j].voteCount.add(1);
+                        electionList[i].candidates[j].voteCount = electionList[i].candidates[j].voteCount + 1;
                     }
                 }
             }
@@ -81,9 +81,7 @@ contract Election is Candidate, Voter, Party {
             }
         }
 
-        voters[_voterId].voteLimitCount = voters[_voterId].voteLimitCount.add(
-            1
-        );
+        voters[_voterId].voteLimitCount = voters[_voterId].voteLimitCount + 1;
 
         emit VoteCast(candidates[_candidateId]);
     }
@@ -93,7 +91,7 @@ contract Election is Candidate, Voter, Party {
         uint256 _totalMember,
         string memory _agenda,
         string memory _logoUrl
-    ) public payable isAuthorize(msg.sender) {
+    ) public payable override isAuthorize(msg.sender) {
         address[] memory emptyArray;
         Party memory party = Party(
             adminAddress,
@@ -107,7 +105,7 @@ contract Election is Candidate, Voter, Party {
         parties[adminAddress] = party;
         partyNames.push(_name);
         partyList.push(party);
-        totalParty = totalParty.add(1);
+        totalParty = totalParty + 1;
 
         emit PartyCreated(party);
     }
@@ -134,7 +132,7 @@ contract Election is Candidate, Voter, Party {
 
         elections[_startDate] = election;
         electionList.push(election);
-        totalElection = totalElection.add(1);
+        totalElection = totalElection + 1;
 
         emit electionStart(election);
     }

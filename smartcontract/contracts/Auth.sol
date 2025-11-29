@@ -12,4 +12,14 @@ contract Auth {
         return _id == adminAddress;
     }
 
+    modifier isAuthorize(address _id) {
+        require(_id == adminAddress, "Not authorized");
+        _;
+    }
+
+    modifier onlyAdmin() {
+        require(msg.sender == adminAddress, "Not authorized");
+        _;
+    }
+
 }

@@ -1,0 +1,246 @@
+{
+  "contractName": "Constants",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Constants.sol\":\"Constants\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Constants.sol\":{\"keccak256\":\"0x37c69164e6b8db491704ded3aedd0122a0da3abade2a731b2c5c7065496d86a9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://43df66121048dcfd10f6a92bb259dd0cd832fb381ca3e6d547a01c804e1dd685\",\"dweb:/ipfs/QmPCLDatxrUovLmEPjPU4Zk5NS8WsZBVtSvEZw6nsP5AX2\"]}},\"version\":1}",
+  "bytecode": "0x608034610256576001600160401b039060608101828111828210176102405760405261002961025b565b91600491828452602093634d414c4560e01b85820152815261004961025b565b600681526546454d414c4560d01b858201528482015261006761025b565b60068152654f544845525360d01b8582015260408201526000918254916003928385558084106101ce575b50838052858420929084905b8286106100b357604051603a90816102cc8239f35b80518051908582116101bb57908992916100cd885461027a565b90601f91828111610185575b508491831160011461011f57918060019593928695938892610114575b505060001982891b1c191690841b1788555b0195019501949361009e565b0151905038806100f6565b8886528486209190601f198416875b81811061016e575091600196949291838897959310610156575b505050831b83018855610108565b0151600019838a1b60f8161c19169055388080610148565b92938760018192878601518155019501930161012e565b6101ac908a8852868820600585808801821c8301938a89106101b2575b01901c01906102b4565b386100d9565b935082936101a2565b634e487b7160e01b845260418952602484fd5b8480528387862091820191015b8181106101e85750610092565b806101f56001925461027a565b80610202575b50016101db565b601f90818111841461021a5750508681555b386101fb565b8361023392848b528c8b20920160051c820191016102b4565b8689812081835555610214565b634e487b7160e01b600052604160045260246000fd5b600080fd5b60408051919082016001600160401b0381118382101761024057604052565b90600182811c921680156102aa575b602083101461029457565b634e487b7160e01b600052602260045260246000fd5b91607f1691610289565b8181106102bf575050565b600081556001016102b456fe600080fdfea2646970667358221220a2445b86e886f5e196fc8b3e15c97625a44a93bc466351ac6e24126813c4292564736f6c63430008110033",
+  "deployedBytecode": "0x600080fdfea2646970667358221220a2445b86e886f5e196fc8b3e15c97625a44a93bc466351ac6e24126813c4292564736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "58:124:2:-:0;;;;-1:-1:-1;;;;;58:124:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;-1:-1:-1;;;58:124:2;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;58:124:2;;;;147:26;;;58:124;;;:::i;:::-;;;;-1:-1:-1;;;58:124:2;;;;;147:26;;58:124;-1:-1:-1;58:124:2;;;147:26;;58:124;;;;;;;;;-1:-1:-1;;58:124:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;58:124:2;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;58:124:2;;;;;;;;;;;;;-1:-1:-1;;58:124:2;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;58:124:2;;;;;;;;;;;-1:-1:-1;;58:124:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;-1:-1:-1;;;58:124:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;-1:-1:-1;58:124:2;;;;;-1:-1:-1;58:124:2;;;;;;;;;;;;;-1:-1:-1;;;;;58:124:2;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "58:124:2:-:0;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ncontract Constants {\n    string[] gender_list;\n\n    constructor(){\n        gender_list = [\"MALE\",\"FEMALE\",\"OTHERS\"];\n    }\n}\n",
+  "sourcePath": "/Users/parbatlama/Documents/BLOCKCHAIN-ELECTION-DAPP/smartcontract/contracts/Constants.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Constants.sol",
+    "exportedSymbols": {
+      "Constants": [
+        270
+      ]
+    },
+    "id": 271,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 255,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Constants",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 270,
+        "linearizedBaseContracts": [
+          270
+        ],
+        "name": "Constants",
+        "nameLocation": "67:9:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 258,
+            "mutability": "mutable",
+            "name": "gender_list",
+            "nameLocation": "92:11:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 270,
+            "src": "83:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+              "typeString": "string[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 256,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "83:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "id": 257,
+              "nodeType": "ArrayTypeName",
+              "src": "83:8:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                "typeString": "string[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 268,
+              "nodeType": "Block",
+              "src": "123:57:2",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 266,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 261,
+                      "name": "gender_list",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 258,
+                      "src": "133:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                        "typeString": "string storage ref[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "components": [
+                        {
+                          "hexValue": "4d414c45",
+                          "id": 262,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "148:6:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_832d6c751ccdd1708fa029e5b41448c94b45f6bec96f6c2357b66d13a249e6a1",
+                            "typeString": "literal_string \"MALE\""
+                          },
+                          "value": "MALE"
+                        },
+                        {
+                          "hexValue": "46454d414c45",
+                          "id": 263,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "155:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_8680ea1834d825a86b2d4c92e365ae0ce825c2bbf2a6af2fc6d7a53d4a18c527",
+                            "typeString": "literal_string \"FEMALE\""
+                          },
+                          "value": "FEMALE"
+                        },
+                        {
+                          "hexValue": "4f5448455253",
+                          "id": 264,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "164:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_da75ff43b8ef8127ad177eba5034deb3f3fbfff3627144838000445f6c48f119",
+                            "typeString": "literal_string \"OTHERS\""
+                          },
+                          "value": "OTHERS"
+                        }
+                      ],
+                      "id": 265,
+                      "isConstant": false,
+                      "isInlineArray": true,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "TupleExpression",
+                      "src": "147:26:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_string_memory_ptr_$3_memory_ptr",
+                        "typeString": "string memory[3] memory"
+                      }
+                    },
+                    "src": "133:40:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage",
+                      "typeString": "string storage ref[] storage ref"
+                    }
+                  },
+                  "id": 267,
+                  "nodeType": "ExpressionStatement",
+                  "src": "133:40:2"
+                }
+              ]
+            },
+            "id": 269,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:2"
+            },
+            "returnParameters": {
+              "id": 260,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:0:2"
+            },
+            "scope": 270,
+            "src": "110:70:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 271,
+        "src": "58:124:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:150:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-11-29T07:26:38.205Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
