@@ -1,4 +1,4 @@
-export const AUTH_CONTRACT_ADDRESS: string = "0xbA05012698CC62aE09188D29cBd734badE042273";
+export const AUTH_CONTRACT_ADDRESS: string = "0xbbF2aA14da47ECF884Cacb4601B35d1Ffcbf33f9";
 export const AUTH_CONTRACT_ABI: any = [
 	{
 		"inputs": [],
@@ -408,7 +408,7 @@ export const AUTH_CONTRACT_ABI: any = [
 	}
 ];
 
-export const VOTER_CONTRACT_ADDRESS: string = "0x9d8316BDB201cE56A055371B38A8303224757da7";
+export const VOTER_CONTRACT_ADDRESS: string = "0xA30834Fa3Dff6D39F7d01A8B68b935A599665F29";
 export const VOTER_CONTRACT_ABI: any = [
 	{
 		"inputs": [],
@@ -1354,7 +1354,7 @@ export const VOTER_CONTRACT_ABI: any = [
 	}
 ];
 
-export const PARTY_CONTRACT_ADDRESS: string = "0x2224Ce39A09E9769Ee05f20F277791a4b37a21EA";
+export const PARTY_CONTRACT_ADDRESS: string = "0xC2B97a97E31D907d4de6299D2352028D0479d772";
 export const PARTY_CONTRACT_ABI: any = [
 	{
 		"anonymous": false,
@@ -2168,7 +2168,7 @@ export const PARTY_CONTRACT_ABI: any = [
 	}
 ];
 
-export const CANDIDATE_CONTRACT_ADDRESS: string = "0xC4A7C4Bd89d627d176504332b771EA80db158cC5";
+export const CANDIDATE_CONTRACT_ADDRESS: string = "0x609f2DBD1424D59173BbE04d336cf71a46175d89";
 export const CANDIDATE_CONTRACT_ABI: any = [
 	{
 		"inputs": [],
@@ -3285,7 +3285,7 @@ export const CANDIDATE_CONTRACT_ABI: any = [
 	}
 ];
 
-export const ELECTION_CONTRACT_ADDRESS: string = "0x4AA355Ea2af89d909bFEb2c85dFCF6B70CE5f0BB";
+export const ELECTION_CONTRACT_ADDRESS: string = "0xf6447B1041319f3dB2a616C243da8cB5De964eD3";
 export const ELECTION_CONTRACT_ABI: any = [
 	{
 		"inputs": [
