@@ -302,7 +302,7 @@ const GLOBAL_SEARCH_KEYWORD = [
     link: "/voter-education/voter-eligibility"
   },
   {
-    keywords: ["Voter Roll", "Voter List"],
+    keywords: ["Voter List", "Voter List"],
     link: "/voter-education/voter-roll"
   },
   {

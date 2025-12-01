@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { GoPrimitiveDot } from 'react-icons/go';
 import Navbar from '../../components/Navbar';
 import LiveCounterCard from '../../components/LiveCounterCard/LiveCounterCard';
 import electionChannel from "../../services/pusher-events";
@@ -160,8 +159,7 @@ export default function Home() {
                 <span className='text-slate-100'>{districtT("title")}</span>
               </div>
               <div className='flex items-center sm:mt-1 xsm:mt-3'>
-                <span className='ml-2 text-lg font-bold text-black'>{districtT("hot_seats")}</span>
-                <GoPrimitiveDot className={`text-4xl ml-5 mr-1 ${electionStatus === 'LIVE' && "text-danger"}`} />
+                <div className={`mx-2 h-4 w-4 rounded-full ${electionStatus === 'LIVE' ? "bg-danger" : "bg-gray-500"}`}></div>
                 <span className='text-[17px]'>{electionStatus}</span>
               </div>
             </div>

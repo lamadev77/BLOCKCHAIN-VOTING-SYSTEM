@@ -21,7 +21,7 @@ const LiveCounterCard: React.FC<LiveCounterCardStruct> = ({ type, data, election
 
   // group candidate by positions
   const candidatesByPositions = _.groupBy(data, (candidate: any) => candidate.position);
-  const leadingCandidate = _.maxBy(data, "totalVotesReceived");
+  const leadingCandidate:any = _.maxBy(data, "totalVotesReceived");
 
   return (
     <div
@@ -36,7 +36,7 @@ const LiveCounterCard: React.FC<LiveCounterCardStruct> = ({ type, data, election
         {
           leadingCandidate?.user && (
             <div className='pt-3 card__body__hot px-4 mb-3 flex'>
-              <AnimatedAvatar src={leadingCandidate?.user?.profile} />
+              <AnimatedAvatar src={leadingCandidate?.user?.profileUrl} />
               <div className='details pt-2 pl-3 mx-3'>
                 <div className='flex items-center'>
                   <span className='text-xl me-4'>{leadingCandidate?.user?.fullName}</span>

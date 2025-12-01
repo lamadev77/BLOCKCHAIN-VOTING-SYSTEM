@@ -15,7 +15,7 @@
     "election_laws": "Election Related Laws",
     "voter_education": "Voter Education",
     "voter_eligibility": "Voter Eligibility",
-    "voter_roll": "Voter Roll",
+    "voter_roll": "Voter List",
     "voter_registration": "Voter Registration",
     "faqs": "Frequently Asked Questions (FAQ)",
     "political_party": "Policy Party",
@@ -658,11 +658,11 @@
     "title": "About Voter Registration eligibility",
     "intro": "Voter registration is one of the main functions of the Commission. The registration is fully based on technology and biometrics. ECN has the following features for voter registration:",
     "para1": "Voter registration is continuous throughout the year.",
-    "para2": "Nepalese citizen aged 16 or above can register their names in the voter roll in all the 77 District Election Offices and District Administration Offices and voter registration mobile teams as announced by the Commission. However, to be eligible voters, they have to be at the age of 18 or above.Citizenship certificate is required document for the registration,",
+    "para2": "Nepalese citizen aged 16 or above can register their names in the Voter List in all the 77 District Election Offices and District Administration Offices and voter registration mobile teams as announced by the Commission. However, to be eligible voters, they have to be at the age of 18 or above.Citizenship certificate is required document for the registration,",
     "para3": "Special registration programs are also conducted depending on the need assessment,",
     "para4": "Name list of registered voters are integrated and de-duplicated in the central server in the ECN headquarters and segregated data is distributed to the District Election Offices,",
-    "para5": "The matured data, after undergoing all the processes including verification, claims and objection, is produced as the voter roll.",
-    "para6": "Voter's Identity Card is produced and distributed on the basis of the voter roll.",
+    "para5": "The matured data, after undergoing all the processes including verification, claims and objection, is produced as the Voter List.",
+    "para6": "Voter's Identity Card is produced and distributed on the basis of the Voter List.",
     "breadcumb1": "Home",
     "breadcumb2": "Voter Education",
     "breadcumb3": "Voter Eligibility",
@@ -671,7 +671,7 @@
     "breadcumb6": "List"
   },
   "voter_roll": {
-    "title": "Voter Roll",
+    "title": "Voter List",
     "search_placeholder": "Search Voter"
   },
   "voter_registration": {
@@ -763,7 +763,7 @@
     "Election related laws": "Election related laws",
     "About Voter Registration": "About Voter Registration",
     "Voter education": "Voter education",
-    "Voter Roll": "Voter Roll",
+    "Voter List": "Voter List",
     "Voter List": "Voter List",
     "Voter Registration": "Voter Registration",
     "Voter Signup": "Voter Signup",
