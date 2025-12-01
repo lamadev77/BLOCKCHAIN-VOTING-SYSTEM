@@ -27,24 +27,38 @@ export default function Home({ districtName }) {
 
   const fetchData = async () => {
     const electionList = await getElectionList();
-    const candidateLists = await getCandidateList();
-    const electionStatus = getElectionStatus("Province", electionList?.at(-1));
-    const groupByCandidates = _.groupBy(electionList.at(-1)?.candidates, (candidate) => candidate.votingBooth);
+    const currentElection: any = electionList.at(-1);
 
-    setElectionStatus(electionStatus);
-    setCandidateLists(groupByCandidates[districtName]);
-    setCurrentElection(groupByCandidates);
-    dispatch(setCandidateList(candidateLists));
-    setElectionList(electionList);
+    if (currentElection?.electionType !== "1") return;
+    const electionStatus = getElectionStatus("1", currentElection);
 
-    voteCastEvent = ElectionSmartContract.events.VoteCast().on("data", (event: any) => {
-      const votedCandidateDetails = event.returnValues[0];
-      let filterCandidates = candidateLists.map((d: any) => {
-        return d.user._id === votedCandidateDetails.user._id ? { ...votedCandidateDetails } : { ...d };
+    // populate candidates with voting booth
+    const _candidateLists = await getCandidateList();
+    const populatedCandidates = currentElection?.candidateAddresses?.map((candidateAddress) => {
+      const _candidate = _candidateLists?.find((c) => c.user.id === candidateAddress);
+      if(_candidate) {
+        return {
+          ..._candidate,
+          votingBooth: currentElection?.boothPlace,
+          position: currentElection?.position
+        }
+      }
+      return null;
+    }).filter(Boolean);
+    const groupByCandidates = _.groupBy(populatedCandidates, (candidate) => candidate.votingBooth);
+
+    //extract candidate from district
+    const _totalCandidates = [];
+    Object.keys(groupByCandidates).forEach((district: string) => {
+      groupByCandidates[district]?.forEach((candidate) => {
+        _totalCandidates.push(candidate);
       });
-      const { electionCandidatesArray } = getSortedCandidatesList(electionList, filterCandidates);
-      setCandidateLists(electionCandidatesArray);
     });
+
+    setElectionList(electionList);
+    setCandidateLists(_totalCandidates);
+    setElectionStatus(electionStatus);
+    setCurrentElection(groupByCandidates);
   }
 
   useEffect(() => {
